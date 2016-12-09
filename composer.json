@@ -1,0 +1,14 @@
+{
+    "name": "wilsilva/money",
+    "description": "My first package, convert number in money BRL",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "William Silva",
+            "email": "williamsilva808@hotmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
