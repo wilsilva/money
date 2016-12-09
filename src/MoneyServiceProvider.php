@@ -27,7 +27,7 @@ class MoneyServiceProvider extends ServiceProvider {
 		$this->mergeConfigFrom(__DIR__ . '/Config/money.php', 'money');
 
 		return $this->app->singleton(Money::class, function ($app) {
-			$moneyFactory = new MoneyFactory();
+			$moneyFactory = new MoneyFactory(config('money.money-type'));
 			return $moneyFactory->loadTypeMoney();
 		});
 	}

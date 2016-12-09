@@ -12,8 +12,8 @@ class MoneyFactory {
 
 	private $moneyType;
 
-	function __construct() {
-		$this->moneyType = config('money.money-type');
+	function __construct(string $moneyType = 'BRL') {
+		$this->moneyType = $moneyType;
 	}
 
 	public function loadTypeMoney() {
