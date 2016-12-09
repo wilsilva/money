@@ -12,7 +12,9 @@
     ],
     "minimum-stability": "stable",
     "require": {},
-    "psr-4": {        
-        "WilSilva\\Money\\": "src/"
+    "autoload": {
+        "psr-4": {        
+            "WilSilva\\Money\\": "src/"
+        }
     }
 }
