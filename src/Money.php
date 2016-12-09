@@ -7,6 +7,9 @@ namespace WilSilva\Money;
  */
 interface Money {
 
-	public function converNumberToMoney(float $number): string;
+	const BRL = "R$ ";
+	const USD = "$ ";
+
+	public function convertNumberToMoney(float $number): string;
 	public function convertMoneyToNumber(string $money): float;
 }

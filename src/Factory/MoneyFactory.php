@@ -2,6 +2,7 @@
 
 namespace WilSilva\Money\Factory;
 
+use WilSilva\Money\Money;
 use WilSilva\Money\MoneyBRL;
 use WilSilva\Money\MoneyUSD;
 
@@ -12,11 +13,11 @@ class MoneyFactory {
 
 	private $moneyType;
 
-	function __construct() {
-		$this->moneyType = config('money.money-type');
+	function __construct(string $moneyType = 'BRL') {
+		$this->moneyType = $moneyType;
 	}
 
-	public function loadTypeMoney() {
+	public function loadTypeMoney(): Money {
 		switch ($this->moneyType) {
 		case 'BRL':
 			return new MoneyBRL;
