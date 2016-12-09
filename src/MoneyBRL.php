@@ -7,11 +7,11 @@ namespace WilSilva\Money;
  */
 class MoneyBRL implements Money {
 
-	public function converNumberToMoney(float $number): string {
-		return "R$ " . number_format($number, 2, ',', '.');
+	public function convertNumberToMoney(float $number): string {
+		return self::BRL . number_format($number, 2, ',', '.');
 	}
 
 	public function convertMoneyToNumber(string $money): float {
-		return (float) str_replace(',', '.', str_replace("R$ ", "", $money));
+		return (float) str_replace(',', '.', str_replace(self::BRL, "", $money));
 	}
 }

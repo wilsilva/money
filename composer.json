@@ -3,6 +3,7 @@
     "description": "My first package, convert number in money BRL",
     "type": "library",
     "license": "MIT",
+    "keywords": ["laravel"],
     "authors": [
         {
             "name": "William Silva",
@@ -12,6 +13,14 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=7.0",
-        "illuminate/support": ">=5.0",
+        "illuminate/support": ">=5.0"
+    },
+    "autoload": {
+        "psr-4": {        
+            "WilSilva\\Money\\": "src/"
+        },
+        "files":[
+            "src/helpers.php"
+        ]
     }
 }
