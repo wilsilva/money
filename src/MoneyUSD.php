@@ -5,7 +5,7 @@ namespace WilSilva\Money;
 /**
  *
  */
-class MoneyUSD implements Money {
+class MoneyUSD extends Money {
 
 	public function convertNumberToMoney(float $number): string {
 		return self::USD . number_format($number, 2, ',', '.');
