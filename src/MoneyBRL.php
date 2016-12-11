@@ -5,7 +5,7 @@ namespace WilSilva\Money;
 /**
  *
  */
-class MoneyBRL implements Money {
+class MoneyBRL extends Money {
 
 	public function convertNumberToMoney(float $number): string {
 		return self::BRL . number_format($number, 2, ',', '.');
