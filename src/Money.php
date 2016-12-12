@@ -31,15 +31,19 @@ abstract class Money {
 	abstract public function convertNumberToMoney(float $number): string;
 	abstract public function convertMoneyToNumber(string $money): float;
 
-	public function getNumber() {
+	public function getNumber(): float {
 		return $this->number;
 	}
 
-	public function getMoney() {
+	public function getMoney(): string {
 		return $this->money;
 	}
 
-	public function offerDescount($descount) {
+	public function offerDescount(int $descount) {
 		$this->init($this->number - ($this->number * ($descount / 100)));
+	}
+
+	public function __toString() {
+		return $this->money;
 	}
 }
