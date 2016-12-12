@@ -12,4 +12,8 @@ class HelpersTest extends PHPUnit_Framework_TestCase {
 	public function testConvertMoneyToNumber() {
 		$this->assertEquals(convert_money_to_number("R$2000,00", "BRL"), 2000.00);
 	}
+
+	public function testOfferDescount() {
+		$this->assertEquals(offer_descount("$100,00", 20, "USD"), "$80,00");
+	}
 }
