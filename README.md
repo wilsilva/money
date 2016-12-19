@@ -64,7 +64,7 @@ return [
 
 ```php
 
-	echo Money::converNumberToMoney(99.90); // dump $ 99,90
+	echo Money::convertNumberToMoney(99.90); // dump $ 99,90
 	// or
 	echo Money::convertMoneyToNumber("$ 99,90"); // dump float 99.90
 
