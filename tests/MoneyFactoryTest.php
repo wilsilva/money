@@ -8,9 +8,12 @@ use WilSilva\Money\MoneyUSD;
  */
 class MoneyFactoryTest extends PHPUnit_Framework_TestCase {
 
+	private $moneyFactory;
+	public function setUp() {
+		$this->moneyFactory = new MoneyFactory("USD");
+	}
 	public function testLoadTypeMoney() {
-		$moneyFactory = new MoneyFactory('USD');
-		$this->assertTrue($moneyFactory->loadTypeMoney() instanceof MoneyUSD);
+		$this->assertTrue($this->moneyFactory->loadTypeMoney() instanceof MoneyUSD);
 	}
 
 }

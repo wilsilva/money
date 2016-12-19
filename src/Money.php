@@ -43,6 +43,22 @@ abstract class Money {
 		$this->init($this->number - ($this->number * ($descount / 100)));
 	}
 
+	public function addingInterest(int $interest) {
+		$this->init($this->number + ($this->number * ($interest / 100)));
+	}
+
+	public function installment($numberOfInstallments): array
+	{
+		$portion = $this->number / $numberOfInstallments;
+		$portions = [];
+
+		while (count($portions) < $numberOfInstallments) {
+			$portions[] = $this->convertNumberToMoney($portion);
+		}
+
+		return $portions;
+	}
+
 	public function __toString() {
 		return $this->money;
 	}
