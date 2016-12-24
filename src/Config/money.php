@@ -1,5 +1,5 @@
 <?php
 
 return [
-	'money-type' => 'BRL',
+	'money-type' => 'BRL', // currency type default system
 ];

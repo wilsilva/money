@@ -1,9 +1,9 @@
 {
     "name": "wilsilva/money",
-    "description": "My first package, convert number in money BRL",
+    "description": "My first package, convert and management number in money",
     "type": "library",
     "license": "MIT",
-    "keywords": ["laravel"],
+    "keywords": ["laravel","PHP"],
     "authors": [
         {
             "name": "William Silva",
