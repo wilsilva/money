@@ -70,6 +70,16 @@ return [
 
 ```
 
+### Helpers
+
+```
+ convert_number_to_money(15.50, "BRL") // dump R$ 15,50
+
+ convert_money_to_number("R$2000,00", "BRL") // dump 2000.00
+
+ offer_descount("$100,00", 20, "USD") // $ 80,00
+```
+
 ## License
 
 The Money Library is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
