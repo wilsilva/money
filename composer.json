@@ -11,6 +11,9 @@
         }
     ],
     "minimum-stability": "stable",
+    "scripts": {
+        "test": "phpunit --colors=always < /dev/tty"
+    },
     "require": {
         "php": ">=7.0",
         "illuminate/support": ">=5.0"
