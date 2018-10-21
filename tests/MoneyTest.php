@@ -35,6 +35,24 @@ class MoneyTest extends PHPUnit_Framework_TestCase {
 		$this->assertEquals($this->money->installment(2), ["R$120,00", "R$120,00"]);
 	}
 
+	public function testAdd() {
+		$this->money->init(200);
+		$this->money->add(50);
+		$this->assertEquals($this->money->getNumber(), 250);
+	}
+
+	public function testMultiply() {
+		$this->money->init(100);
+		$this->money->multiply(10);
+		$this->assertEquals($this->money->getNumber(), 1000);
+	}
+
+	public function testDivide() {
+		$this->money->init(100);
+		$this->money->divide(2);
+		$this->assertEquals($this->money->getNumber(), 50);
+	}
+
 	public function testToString() {
 
 		$this->money->init(200);

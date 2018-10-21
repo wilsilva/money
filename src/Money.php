@@ -59,6 +59,39 @@ abstract class Money {
 		return $portions;
 	}
 
+	public function add($value) {
+		
+		if(is_string($value)) {
+			$value = $this->convertMoneyToNumber($value);
+		}
+
+		$this->init($this->number + $value);
+	}
+
+	public function multiply($value) {
+		if(is_string($value)) {
+			$value = $this->convertMoneyToNumber($value);
+		}
+
+		$this->init($this->number * $value);
+	}
+
+	public function subtract($value) {
+		if(is_string($value)) {
+			$value = $this->convertMoneyToNumber($value);
+		}
+
+		$this->init($this->number - $value);
+	}
+
+	public function divide($value) {
+		if(is_string($value)) {
+			$value = $this->convertMoneyToNumber($value);
+		}
+
+		$this->init($this->number / $value);
+	}	
+
 	public function __toString() {
 		return $this->money;
 	}
