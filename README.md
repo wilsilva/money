@@ -8,14 +8,14 @@
 
 ## Introduction
 
-My first package, convert number in money.
+My first package, converting number into money.
 
 ### Installation
 
 To install Money, just run the following command:
 
 ```
-	composer require wilsilva/money
+composer require wilsilva/money
 
 ```
 
@@ -42,7 +42,7 @@ Add the `MoneyFacade` facade to the `aliases` array in your `app` configuration 
 To publish the config settings in Laravel 5 use:
 
 ```
-	php artisan vendor:publish --provider="WilSilva\Money\MoneyServiceProvider"
+php artisan vendor:publish --provider="WilSilva\Money\MoneyServiceProvider"
 ```
 
 If you change type money, only to change in config/money.php
@@ -54,9 +54,6 @@ If you change type money, only to change in config/money.php
 return [
 	'money-type' => 'USD', // change to BRL for example
 ];
-
-	
-
 ```
 
 ### Usage
@@ -64,20 +61,30 @@ return [
 
 ```php
 
-	echo Money::convertNumberToMoney(99.90); // dump $ 99,90
-	// or
-	echo Money::convertMoneyToNumber("$ 99,90"); // dump float 99.90
-
+echo Money::convertNumberToMoney(99.90); // dump $ 99,90
+// or
+echo Money::convertMoneyToNumber("$ 99,90"); // dump float 99.90
 ```
 
 ### Helpers
 
 ```
- convert_number_to_money(15.50, "BRL") // dump R$ 15,50
+ convert_number_to_money(15.50, "BRL"); // dump R$ 15,50
 
- convert_money_to_number("R$2000,00", "BRL") // dump 2000.00
+ convert_money_to_number("R$2000,00", "BRL"); // dump 2000.00
 
- offer_descount("$100,00", 20, "USD") // $ 80,00
+ offer_descount("$100,00", 20, "USD"); // $ 80,00
+ 
+ adding_interest("$100,00", 20, "USD"); // $ 120,00
+
+ add("110,00", "20", "USD"); // $ 130,00
+
+ subtract(80, "40", "BRL"); // R$ 40,00
+
+ multiply(50, "3", "BRL"); // R$ 150,00
+
+ divide(100, "2", "USD"); // $ 50,00
+
 ```
 
 ## License
