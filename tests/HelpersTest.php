@@ -16,4 +16,24 @@ class HelpersTest extends PHPUnit_Framework_TestCase {
 	public function testOfferDescount() {
 		$this->assertEquals(offer_descount("$100,00", 20, "USD"), "$80,00");
 	}
+
+	public  function testAddingInterest() {
+        $this->assertEquals(adding_interest("$100,00", 20, "USD"), "$120,00");
+    }
+
+    public  function testAdd() {
+        $this->assertEquals(add("$110,00", "20", "USD"), "$130,00");
+    }
+
+    public  function testSubtract() {
+        $this->assertEquals(subtract(120.00, "20", "BRL"), "R$100,00");
+    }
+
+    public  function testMultiply() {
+        $this->assertEquals(multiply(50.00,2, "USD"), "$100,00");
+    }
+
+    public  function testDivide() {
+        $this->assertEquals(divide("100,00", "2", "BRL"), "R$50,00");
+    }
 }

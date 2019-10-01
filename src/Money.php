@@ -40,10 +40,18 @@ abstract class Money {
 	}
 
 	public function offerDescount(int $descount) {
+        if(is_string($descount)) {
+            $descount = $this->convertMoneyToNumber($descount);
+        }
+
 		$this->init($this->number - ($this->number * ($descount / 100)));
 	}
 
 	public function addingInterest(int $interest) {
+        if(is_string($interest)) {
+            $interest = $this->convertMoneyToNumber($interest);
+        }
+
 		$this->init($this->number + ($this->number * ($interest / 100)));
 	}
 
